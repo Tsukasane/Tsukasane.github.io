@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>home page</title>
+    <link>https://Tsukasane.github.io/</link>
+    <description>Recent content on home page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Tsukasane.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dots in my life</title>
+      <link>https://Tsukasane.github.io/post/post2/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/post/post2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Children Program Volunteer</title>
+      <link>https://Tsukasane.github.io/post/post5/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/post/post5/</guid>
+      <description>Volunteer of Children&amp;rsquo;s Hope Foundation
+Launcher of the &amp;ldquo;True Fairytale&amp;ndash;children medical caring&amp;rdquo; non-profit program.
+Volunteer teacher of the &amp;ldquo;Together Support Teaching&amp;rdquo; program.</description>
+    </item>
+    
+    <item>
+      <title>Figure Skating Enthusiast</title>
+      <link>https://Tsukasane.github.io/post/post3/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/post/post3/</guid>
+      <description>Chief of the school figure skating club.</description>
+    </item>
+    
+    <item>
+      <title>EShop Owner</title>
+      <link>https://Tsukasane.github.io/post/post4/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/post/post4/</guid>
+      <description>5 suits of originally designed garments.
+17 provinces&amp;rsquo; physical store cooperations.</description>
+    </item>
+    
+    <item>
+      <title>Anime Club Member</title>
+      <link>https://Tsukasane.github.io/post/post1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/post/post1/</guid>
+      <description>BiliBili Dancing Festival
+2021 Blossom with the Dream
+2021 The Moon and Flowers in Pairs
+2022 Heartbeat-Spectrum</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://Tsukasane.github.io/generic-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/generic-page/</guid>
+      <description>Education 2020-2024 Beijing Normal University, Beijing, China
+Major: Computer Science and Technology Minor: International Economy and Trade Research Experience 2021-2022, Virtual Reality and Visualization Lab, Beijing Normal University Research on 3D Avatar Construction under the supervision of Professor Zhongke Wu and Professor Xingce Wang. 2022 Summer, HCI Lab, Institute of Software, Chinese Academy of Science Research on VR interaction under the supervision of Researcher Teng Han. Tianren Luo, Chenyang Cai, Yiwen Zhao, Yachun Fan*, Feng Tian*, Teng Han*, Exploring Locomotion Methods with Upright Redirected Views for VR Users in Reclining &amp;amp; Lying Positions 2022.</description>
+    </item>
+    
+    <item>
+      <title>简历</title>
+      <link>https://Tsukasane.github.io/%E7%AE%80%E5%8E%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Tsukasane.github.io/%E7%AE%80%E5%8E%86/</guid>
+      <description>【简历内容】Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet dui nec dui commodo auctor non eu mauris. Duis varius finibus vestibulum. Praesent aliquam, erat sed dictum feugiat, velit erat iaculis elit, eget iaculis ex libero ac sapien. Sed maximus ut lectus et varius. Nullam posuere velit vitae est consectetur porttitor. Vestibulum tempor felis ante, nec volutpat risus vestibulum ac. Mauris at finibus felis, eu placerat arcu. Sed nec semper nunc.</description>
+    </item>
+    
+  </channel>
+</rss>
