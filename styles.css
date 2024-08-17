@@ -1,0 +1,185 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: rgba(100, 100, 100, 1.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.home-page, html.home-page {
+    height: 600px;
+}
+
+body.resume-page, html.resume-page {
+    height: 1600px;
+}
+
+body.activities-page, html.activities-page {
+    height: 1300px;
+}
+
+.background {
+    background: url('./resources/background.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1800px;
+    z-index: -1;
+}
+
+.content {
+    background-color: rgba(45, 39, 39, 0.66); /*rgba(248, 248, 238, 0.8)*/
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto; /* This will center the content both vertically and horizontally */
+}
+
+/* 定义正文容器的样式 */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline;
+}
+
+.nav-item a {
+    color: rgba(248, 248, 238, 1.0);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    margin-left: auto;
+}
+
+.section {
+    display: none;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.section.active {
+    display: block;
+}
+
+/* 插入的照片 */
+.profile-photo {
+    float: right;
+    margin-left: 20px; /* 图片与文字之间的间距 */
+    margin-bottom: 10px; /* 如果有多段文字，图片下方与文字之间的间距 */
+    width: 150px; /* 根据需要调整图片宽度 */
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 8px; /* 图片圆角 */
+}
+
+/* 插入的照片 */
+.profile-video {
+    float: right;
+    margin-left: 20px; /* 图片与文字之间的间距 */
+    margin-bottom: 10px; /* 如果有多段文字，图片下方与文字之间的间距 */
+    width: 150px; /* 根据需要调整图片宽度 */
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 8px; /* 图片圆角 */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+    text-align: center;
+    color: rgba(248, 248, 238, 1.0);
+}
+
+p {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgba(248, 248, 238, 1.0);
+}
+
+h3 {
+    color: #444;
+    margin-top: 20px;
+}
+
+h4 {
+    color: #444;
+    margin-top: 15px;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* list */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* emphasize text */
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
