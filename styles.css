@@ -29,7 +29,7 @@ body.activities-page, html.activities-page {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1800px;
+    height: 2500px;
     z-index: -1;
 }
 
@@ -37,9 +37,8 @@ body.activities-page, html.activities-page {
     background-color: rgba(45, 39, 39, 0.66); /*rgba(248, 248, 238, 0.8)*/
     border-radius: 20px;
     padding: 30px;
-    width: 90%;
-    max-width: 900px;
-    height: 90%;
+    width: 70%;
+    height: 2100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,12 +47,17 @@ body.activities-page, html.activities-page {
 
 /* 定义正文容器的样式 */
 .container {
-    max-width: 800px;
+    width: 90%;
+    height: 1800px;
+    min-height: auto; /* 根据内容动态调整 */
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 根据需求设置对齐方式 */
 }
 
 .navbar {
