@@ -20,7 +20,7 @@ body.resume-page, html.resume-page {
 }
 
 body.activities-page, html.activities-page {
-    height: 1300px;
+    height: 1600px;
 }
 
 .background {
@@ -45,19 +45,15 @@ body.activities-page, html.activities-page {
     margin: auto; /* This will center the content both vertically and horizontally */
 }
 
-/* 定义正文容器的样式 */
 .container {
     width: 90%;
     height: 1800px;
-    min-height: auto; /* 根据内容动态调整 */
+    min-height: auto; 
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 根据需求设置对齐方式 */
 }
 
 .navbar {
