@@ -1,35 +1,39 @@
+/* 导入Google字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     color: rgba(100, 100, 100, 1.0);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* 改为flex-start，让内容从顶部开始 */
 }
 
 body.home-page, html.home-page {
-    height: 600px;
+    min-height: 100vh; /* 使用min-height确保至少占满视口 */
 }
 
 body.resume-page, html.resume-page {
-    height: 1600px;
+    min-height: 100vh; /* 使用min-height确保至少占满视口 */
 }
 
 body.activities-page, html.activities-page {
-    height: 1600px;
+    min-height: 100vh; /* 使用min-height确保至少占满视口 */
 }
 
 .background {
     background: url('./resources/background.jpg') no-repeat center center/cover;
-    position: absolute;
+    background-attachment: fixed; /* 固定背景图，跟随滚动 */
+    position: fixed; /* 改为fixed，让背景图固定在视口 */
     top: 0;
     left: 0;
     width: 100%;
-    height: 2500px;
+    height: 100vh; /* 使用固定高度占满整个视口 */
     z-index: -1;
 }
 
@@ -37,23 +41,266 @@ body.activities-page, html.activities-page {
     background-color: rgba(45, 39, 39, 0.66); /*rgba(248, 248, 238, 0.8)*/
     border-radius: 20px;
     padding: 30px;
-    width: 70%;
-    height: 2100px;
+    width: 75%;
+    min-height: 80vh; /* 使用min-height，内容区域至少占80%视口高度 */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* 改为flex-start，让内容从顶部开始 */
     margin: auto; /* This will center the content both vertically and horizontally */
+    position: relative; /* 添加相对定位，确保在背景图之上 */
+    z-index: 1; /* 确保内容在背景图之上 */
 }
 
 .container {
     width: 90%;
-    height: 1800px;
-    min-height: auto; 
+    min-height: auto; /* 让容器高度适应内容 */
     margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 主页特殊布局 */
+.home-page .container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.home-page .container:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 渐变分割线 */
+.gradient-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d0d0d0, transparent);
+    margin: 20px 0;
+    border-radius: 1px;
+}
+
+/* 活动页面特殊布局 */
+.activities-page .container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.activities-page .container:last-child {
+    border-bottom: none;
+}
+
+.activities-page .container:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 项目页面特殊布局 */
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border-bottom: 3px solid #e0e0e0; /* 添加底部边框作为分隔线 */
+}
+
+.project-item:last-child {
+    border-bottom: none; /* 最后一个项目不需要底部边框 */
+}
+
+.project-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 30%;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px; /* 固定高度，让图片更长 */
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+    width: 70%;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.0em; /* 调小字号 */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.project-authors {
+    font-size: 0.9em; /* 调小字号 */
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.project-venue {
+    font-size: 0.9em; /* 调小字号 */
+    color: #dbb17a; /* 米棕色 */
+    font-weight: 500;
+}
+
+.project-venue a {
+    color: #dbb17a; /* 米棕色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-venue a:hover {
+    color: #6B5B47; /* 深一点的米棕色 */
+    text-decoration: underline;
+}
+
+/* 项目照片样式 - 左边长图片 */
+.project-photo {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 200px; /* 更宽 */
+    height: 120px; /* 更长但比正方形更矮 */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+    
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .home-page .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .gradient-separator {
+        margin: 15px 0;
+    }
+    
+    .activities-page .container {
+        width: 95%;
+        margin: 10px auto 25px auto;
+        padding: 15px;
+    }
+    
+    .project-item {
+        flex-direction: column;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .project-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .project-image img {
+        height: 150px; /* 移动端调整高度 */
+    }
+    
+    .project-content {
+        width: 100%;
+    }
+    
+    .project-photo {
+        width: 150px;
+        height: 100px;
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        width: 98%;
+        padding: 10px;
+    }
+    
+    .container {
+        width: 98%;
+        padding: 10px;
+    }
+    
+    .home-page .container {
+        width: 98%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+    .gradient-separator {
+        margin: 12px 0;
+    }
+    
+    .activities-page .container {
+        width: 98%;
+        margin: 10px auto 20px auto;
+        padding: 10px;
+    }
+    
+    .project-item {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .project-image img {
+        height: 120px; /* 小屏幕调整高度 */
+    }
+    
+    .project-photo {
+        width: 120px;
+        height: 80px;
+    }
+    
+    .home-page .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
 }
 
 .navbar {
@@ -71,10 +318,13 @@ body.activities-page, html.activities-page {
     color: rgba(248, 248, 238, 1.0);
     text-decoration: none;
     margin-right: 15px;
+    font-weight: 500; /* 增加导航链接的字体粗细 */
+    transition: color 0.3s ease; /* 添加过渡效果 */
 }
 
 .nav-item a:hover {
     text-decoration: underline;
+    color: rgba(255, 255, 255, 1.0); /* 悬停时变亮 */
 }
 
 .language-switch {
@@ -102,7 +352,19 @@ body.activities-page, html.activities-page {
     border-radius: 8px; /* 图片圆角 */
 }
 
-/* 插入的照片 */
+/* 主页照片 - 更大尺寸 */
+.home-page .profile-photo {
+    width: 200px; /* 主页照片更大 */
+    height: 200px;
+    float: right;
+    margin-left: 25px; /* 增加左边距 */
+    margin-bottom: 15px; /* 增加下边距 */
+    object-fit: cover;
+    border-radius: 10px; /* 稍微增加圆角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 添加阴影效果 */
+}
+
+/* 插入的视频 */
 .profile-video {
     float: right;
     margin-left: 20px; /* 图片与文字之间的间距 */
@@ -118,11 +380,49 @@ h1 {
     font-size: 2.5em;
     text-align: center;
     color: rgba(248, 248, 238, 1.0);
+    font-family: 'Playfair Display', serif; /* 使用优雅的衬线字体 */
+    font-weight: 600;
+    letter-spacing: 0.5px; /* 增加字母间距 */
+    line-height: 1.2;
 }
 
+/* 默认段落样式 */
 p {
     text-align: left;
     font-size: 1.1em;
+    line-height: 1.6; /* 增加行高，提高可读性 */
+    font-weight: 400;
+}
+
+/* 主页段落 - 与项目页面一致的字体样式 */
+.home-page p {
+    font-size: 1.0em; /* 与项目页面一致的字号 */
+    line-height: 1.5; /* 与项目页面一致的行高 */
+    color: #333; /* 与项目页面一致的颜色 */
+    margin-bottom: 12px; /* 减少段落间距 */
+}
+
+.home-page p b {
+    font-weight: 600;
+    color: #333;
+}
+
+/* 项目页面段落 - 更大的字号 */
+.resume-page p {
+    font-size: 1.0em; /* 调小字号 */
+    line-height: 1.5;
+}
+
+/* 活动页面段落 - 与项目页面一致的字体样式 */
+.activities-page p {
+    font-size: 1.0em; /* 与项目页面一致的字号 */
+    line-height: 1.5;
+    color: #333;
+}
+
+.activities-page p b {
+    font-weight: 600;
+    color: #333;
 }
 
 h2 {
@@ -130,25 +430,38 @@ h2 {
     font-size: 1.5em;
     text-align: center;
     color: rgba(248, 248, 238, 1.0);
+    font-family: 'Playfair Display', serif; /* 使用优雅的衬线字体 */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
 }
 
 h3 {
     color: #444;
     margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 h4 {
     color: #444;
     margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 a {
     color: #007acc;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /* 添加过渡效果 */
 }
 
 a:hover {
     text-decoration: underline;
+    color: #005999; /* 悬停时变深 */
 }
 
 /* list */
@@ -159,11 +472,12 @@ ul, ol {
 
 li {
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 /* emphasize text */
 strong {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 em {
@@ -175,11 +489,13 @@ pre {
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
 }
 
 code {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
     background-color: #eee;
     padding: 2px 4px;
     border-radius: 3px;
+    font-size: 0.9em;
 }
