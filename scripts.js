@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const enLink = document.getElementById('en');
-    const cnLink = document.getElementById('cn');
-
-    // 添加滚动到顶部的功能
     window.scrollTo(0, 0);
 
-    enLink.addEventListener('click', function() {
-        setLanguage('en');
-    });
-
-    cnLink.addEventListener('click', function() {
-        setLanguage('cn');
-    });
+    const enLink = document.getElementById('en');
+    const cnLink = document.getElementById('cn');
+    if (enLink && cnLink) {
+        enLink.addEventListener('click', function() {
+            setLanguage('en');
+        });
+        cnLink.addEventListener('click', function() {
+            setLanguage('cn');
+        });
+    }
 
     function setLanguage(lang) {
         const page = window.location.pathname.split('/').pop().split('.')[0]; // 获取当前页面的文件名 (不包含扩展名)

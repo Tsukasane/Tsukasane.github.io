@@ -43,19 +43,83 @@
             <h2>Welcome to My Portfolio</h2>
         </div>
 
-        <div class="container">
-            <img src="./resources/yiwenzhao.jpg" alt="Profile Photo" class="profile-photo">
-            <p>I'm a second-year <a href="https://www.ri.cmu.edu/education/academic-programs/master-of-science-computer-vision/">MSCV</a> student at <a href="https://www.ri.cmu.edu/">the Robotics Institute</a>, Carnegie Mellon University, where I work with <a href="https://sites.google.com/view/shinjiwatanabe?pli=1">Prof. Shinji Watanabe</a>, <a href="https://laszlojeni.com/index.html#lab">Prof. László A. Jeni</a>, also collaborate with <a href="https://zyliatzju.github.io/">Prof. Zhongyu Li</a>. Currently, I am interning at Tencent America for research and seeking 2026 fall Ph.D. position.</p>
-            <p>My research interests lie in human-centric topics, including <b>multimodal generative models</b>, <b>digital humans</b>, and <b>humanoids</b>. 
-                The goal is to benefit people in a way that is useful and fun. I believe multimodal signals have a natural alignment and complementarity with each other. They make our lives as human beings vibrant and fascinating. Also, grounding these ideas in the same physical world as me matters. It means to deeply interact with people, and to continuously learn from the environment.</p>
-            <div class="gradient-separator"></div>
-            <p><b>Misc:</b> I love figure skating, a beautiful fusion of highly dynamic, precise motion and rich multimodal signals. I also love Winnie the Pooh, the kindest little bear in the world, who has been my best buddy since I was two.</p>
-            <p><b>Thanks:</b> I've had the great honor of working with <a href="https://scholar.google.co.jp/citations?user=kHKwQ9gAAAAJ&hl=en">Prof. Teng Han</a>, <a href="https://scholar.google.co.jp/citations?user=OH7-k7oAAAAJ&hl=zh-CN">Prof. Yongzhen Huang</a>, <a href="https://scholar.google.com/citations?user=voqw10cAAAAJ&hl=en">Prof. Shanghang Zhang</a> and many senior colleagues and mentors during my undergraduate study.
-                Deepest thanks to their invaluable advice and guidance.</p>
+        <div class="container" id="home-container">
+            <div class="home-view-stack">
+            <section class="home-view" data-home-view="future" aria-label="Graduate and portfolio">
+                <div class="home-lead home-lead--split">
+                    <aside class="home-aside">
+                        <img src="./resources/Yiwen_photo2.jpg" alt="Profile Photo" class="profile-photo">
+                        <div class="bellman-widget home-bellman" aria-label="Path summary via Bellman equation">
+                            <p class="bellman-hint">A way to learn more.</p>
+                            <div class="bellman-eq">
+                                <span class="bellman-eq-line">
+                                    <span class="eq-static">V(<i>s</i>) = E[</span><button type="button" class="eq-token" data-panel="reward" aria-pressed="false" title="immediate reward"><i>r</i></button><span class="eq-static"> + <i>γ</i> </span><button type="button" class="eq-token is-active" data-panel="future" aria-pressed="true" title="value of next state">V(<i>s</i>′)</button><span class="eq-static">]</span>
+                                </span>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="home-main-text">
+                        <p>I'm an incoming PhD student at The Chinese University of Hong Kong, co-advised by <a href="https://zyliatzju.github.io/">Prof. Zhongyu Li</a> and <a href="https://xbpeng.github.io/">Prof. Xue Bin (Jason) Peng</a>. Prior to that, I was a master's student at <a href="https://www.ri.cmu.edu/">CMU RI</a>, where I worked with <a href="https://sites.google.com/view/shinjiwatanabe?pli=1">Prof. Shinji Watanabe</a>, <a href="https://laszlojeni.com/index.html#lab">Prof. László A. Jeni</a>, and collaborate with Prof. Zhongyu Li.</p>
+                        <p>My research interests lie in human-centric topics, including <b>multimodal generative models</b>, <b>digital humans</b>, and <b>humanoid robots</b>. I hope it can benefit people in a way that is useful and fun.</p>
+                        <details class="home-beliefs-details">
+                            <summary class="home-beliefs-summary">Some beliefs:</summary>
+                            <ul class="home-focus-points">
+                                <li>Multimodal signals have a natural alignment and complementarity with each other. They make our lives as human beings vibrant and fascinating.</li>
+                                <li>Grounding these ideas in the same physical world as us humans matters. It means to deeply interact with people, and to continuously learn from the environment.</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <p><b>Misc:</b> I love figure skating, a beautiful fusion of highly dynamic, precise motion and rich multimodal signals. I also love Winnie the Pooh, the kindest little bear in the world, who has been my best buddy since I was two.</p>
+                </div>
+                <!-- <div class="gradient-separator"></div> -->
+            </section>
+            <section class="home-view" data-home-view="reward" hidden aria-label="Undergraduate — content to be added">
+                <div class="home-lead home-lead--split">
+                    <aside class="home-aside">
+                        <img src="./resources/yiwenzhao.jpg" alt="Profile Photo" class="profile-photo">
+                        <div class="bellman-widget home-bellman" aria-label="Path summary via Bellman equation">
+                            <p class="bellman-hint">A way to learn more.</p>
+                            <div class="bellman-eq">
+                                <span class="bellman-eq-line">
+                                    <span class="eq-static">V(<i>s</i>) = E[</span><button type="button" class="eq-token" data-panel="reward" aria-pressed="false" title="immediate reward"><i>r</i></button><span class="eq-static"> + <i>γ</i> </span><button type="button" class="eq-token is-active" data-panel="future" aria-pressed="true" title="value of next state">V(<i>s</i>′)</button><span class="eq-static">]</span>
+                                </span>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="home-main-text">
+                        <p>I received my B.S. in Computer Science and a minor in International Economics and Trade from Beijing Normal University. I served as the chief of the student union in my Sophomore year and the chief of the figure skating club in my Junior year.</p>
+                        <p>During my undergraduate research, I've had the great honor of working with <a href="https://scholar.google.co.jp/citations?user=kHKwQ9gAAAAJ&hl=en">Prof. Teng Han</a>, <a href="https://scholar.google.co.jp/citations?user=OH7-k7oAAAAJ&hl=zh-CN">Prof. Yongzhen Huang</a>, <a href="https://scholar.google.com/citations?user=voqw10cAAAAJ&hl=en">Prof. Shanghang Zhang</a> and many student mentors. Deepest thanks to their invaluable guidance.</p>
+                        <p>I interned at Tencent America (Hunyuan Team) in Spring 2026.</p>
+                    </div>
+                </div>
+            </section>
+            </div>
         </div>
 
     </div>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var home = document.getElementById('home-container');
+        if (!home) return;
+        function showHomeView(panelKey) {
+            home.querySelectorAll('.home-view[data-home-view]').forEach(function (view) {
+                view.hidden = view.getAttribute('data-home-view') !== panelKey;
+            });
+            home.querySelectorAll('.eq-token[data-panel]').forEach(function (btn) {
+                var active = btn.getAttribute('data-panel') === panelKey;
+                btn.classList.toggle('is-active', active);
+                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+            });
+        }
+        home.addEventListener('click', function (e) {
+            var btn = e.target.closest && e.target.closest('.eq-token[data-panel]');
+            if (!btn || !home.contains(btn)) return;
+            e.preventDefault();
+            showHomeView(btn.getAttribute('data-panel'));
+        });
+    });
+    </script>
     <script src="./scripts.js"></script>
 </body>
 </html>
