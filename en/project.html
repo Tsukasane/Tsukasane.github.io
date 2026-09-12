@@ -14,7 +14,7 @@
         <nav class="navbar">
             <ul>
                 <li class="nav-item"><a href="./../index.html">Home</a></li>
-                <li class="nav-item"><a href="./project.html">Pubs/Projects</a></li>
+                <li class="nav-item"><a href="./project.html">Publications</a></li>
                 <li class="nav-item"><a href="./activities.html">Activities</a></li>
                 <li class="nav-item">
                     <a href="https://github.com/Tsukasane" target="_blank">
@@ -39,12 +39,12 @@
         </nav>
 
         <div id="home" class="section active" style="margin-bottom: 0px;">
-            <h1>Projects/Publications</h1>
-            <h2>Recent Update: 2026-02</h2>
+            <h1>Publications</h1>
+            <h2>Recent Update: 2026-09</h2>
         </div>
 
         <div class="container" style="margin-top: 0px;"> 
-            <h3>Projects</h3>
+            <!-- <h3>Projects</h3>
             
             <div class="project-item">
                 <div class="project-content">
@@ -52,12 +52,28 @@
                     <div class="project-title">Fine-tune a motion generative model through human feedback.</div>
                     <div class="project-authors">Integrate human feedback into the text-to-motion model fine-tuning. Guide humanoid motion to better align with human preferences.</div>
                 </div>
-            </div>
+            </div> -->
 
-            <h3>Papers</h3>
-            
+            <h3 class="pub-tabs" id="pub-tabs">
+                <button type="button" class="pub-tab is-active" data-pub-tab="paper" aria-pressed="true">Paper</button>
+                <span class="pub-tab-sep">/</span>
+                <button type="button" class="pub-tab" data-pub-tab="demo" aria-pressed="false">Demo</button>
+            </h3>
+
+            <div class="pub-list" id="pub-list">
+            <!-- RobotPersona Project -->
+            <!-- <div class="project-item" data-pub-type="paper">
+                <div class="project-content">
+                    <img src="./../resources/placeholder.png" alt="RobotPersona" class="project-photo">
+                    <div class="project-title">RobotPersona: Persona-Driven Stylized Motion Generation for Humanoids via Latent Fusion</div>
+                    <div class="project-authors"><a href="">Yuehua Li*</a>, <b>Yiwen Zhao*</b>, <a href="">Xinchen Yao</a>, <a href="">Zike Yan</a>, <a href="">Zhongyu Li</a></div>
+                    <div class="project-venue"><b>[in submission]</b> | <a href="">project page</a> | <a href="">paper</a> | <a href="">code</a></div>
+                </div>
+            </div> -->
+
+            <div class="pub-list" id="pub-list">
             <!-- OnlineHMR Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/updated_teaser.png" alt="OnlineHMR" class="project-photo">
                     <div class="project-title">OnlineHMR: Video-based Online World-Grounded Human Mesh Recovery</div>
@@ -68,7 +84,7 @@
             </div>
 
             <!-- CRISP Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/CRISP.png" alt="CRISP" class="project-photo">
                     <div class="project-title">CRISP: Contact-guided Real2Sim from Monocular Video with Planar Scene Primitives</div>
@@ -77,8 +93,19 @@
                 </div>
             </div>
 
+            <!-- SoundscapeAgent Project -->
+            <div class="project-item" data-pub-type="paper">
+                <div class="project-content">
+                    <img src="./../resources/soundscape_agent.png" alt="SoundscapeAgent" class="project-photo">
+                    <div class="project-title">SoundscapeAgent: Agentic Soundscape Construction for Controllable Synthesis and Scalable Audio-Language Supervision</div>
+                    <div class="project-authors"><a href="https://scholar.google.com/citations?user=DmFX6JsAAAAJ&hl=zh-CN">Hao Zhang*</a>, <b>Yiwen Zhao*</b>, <a href="https://scholar.google.com/citations?user=7NaLzdYAAAAJ&hl=zh-CN">Yixuan Zhang</a>, <a href="https://scholar.google.com/citations?user=CX2Eo2MAAAAJ&hl=en">Yiwen Shao</a>, <a href="">Steve Yves</a></div>
+                    <div class="project-venue"><b>[SLT 2026]</b> | <a href="https://haozhang6720.github.io/SoundscapeAgentDemoPage/">project page</a> | <a href="https://arxiv.org/abs/2607.21857">paper</a> </div>
+                    <div class="project-tldr">(Work done during internship at Tencent America)</div>
+                </div>
+            </div>
+
             <!-- FreeDance Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/freedance.png" alt="FreeDance" class="project-photo">
                     <div class="project-title">FreeDance: Towards Harmonic Free-Number Group Dance Generation via a Unified Framework</div>
@@ -90,7 +117,7 @@
             </div>
             
             <!-- ARECHO Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/arecho_logo_white.png" alt="ARECHO" class="project-photo">
                     <div class="project-title">ARECHO: Autoregressive Evaluation via Chain-Based Hypothesis Optimization for Speech Multi-Metric Estimation</div>
@@ -105,7 +132,7 @@
             </div>
 
             <!-- SLMSVS Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/SLMSVS.png" alt="SLMSVS" class="project-photo">
                     <div class="project-title">Adapting Speech Language Model to Singing Voice Synthesis</div>
@@ -116,7 +143,7 @@
             </div>
 
             <!-- ESPnet-SpeechLM Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="demo" hidden>
                 <div class="project-content">
                     <img src="./../resources/espnet_speechlm.png" alt="SpeechLM" class="project-photo">
                     <div class="project-title">ESPnet-SpeechLM: An Open Speech Language Model Toolkit</div>
@@ -127,7 +154,7 @@
             </div>
 
             <!-- Singing Voice Synthesis Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/svsaug.png" alt="SVSAug" class="project-photo">
                     <div class="project-title">Robust Training of Singing Voice Synthesis Using Prior and Posterior Uncertainty</div>
@@ -140,7 +167,7 @@
             </div>
 
             <!-- VERSA Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="demo" hidden>
                 <div class="project-content" style="display: flex; align-items: center;">
                     <img src="./../resources/versa.png" alt="VERSA" class="project-photo" style="float: none; flex-shrink: 0; margin-right: 20px;">
                     <div style="flex: 1;">
@@ -148,7 +175,7 @@
                         <div style="margin-bottom: 20px;">
                             <div class="project-title">VERSA-v2: A Modular and Scalable Toolkit for Speech and Audio Evaluation with Expanded Metrics, Visualization, and LLM Integration</div>
                             <div class="project-authors"><a href="http://shijt.site/">Jiatong Shi</a>, <a href="https://scholar.google.com/citations?user=b35P7lAAAAAJ&hl=zh-TW">Bo-Hao Su</a>, <a href="https://scholar.google.com/citations?user=pbU47_MAAAAJ&hl=en">Shikhar Bharadwaj</a>, <b>Yiwen Zhao</b>, <a href="https://scholar.google.com/citations?user=34OMWDQAAAAJ&hl=en">Shih-Heng Wang</a>, <a href="https://scholar.google.com/citations?user=KrEYe-IAAAAJ&hl=en">Jionghao Han</a>, <a href="https://scholar.google.com/citations?user=slH6TeAAAAAJ&hl=zh-CN">Haoran Wang</a>, <a href="https://scholar.google.com/citations?user=aTUq3f4AAAAJ&hl=en">Wei Wang</a>, <a href="">Wenhao Feng</a>, <a href="https://scholar.google.com/citations?user=YTEG_FIAAAAJ&hl=zh-CN">Yuxun Tang</a>, <a href="https://siddhu001.github.io/">Siddhant Arora</a>, <a href="https://jctian98.github.io/">Jinchuan Tian</a>, <a href="https://wanchichen.github.io/">William Chen</a>, <a href="https://scholar.google.co.kr/citations?user=MSIvlNoAAAAJ&hl=en&authuser=1">Hye-jin Shim</a>, <a href="https://scholar.google.com/citations?user=LQ_ApskAAAAJ&hl=en">Wangyou Zhang</a>, <a href="https://scholar.google.com/citations?user=g71mJO4AAAAJ&hl=zh-TW">Wen-Chin Huang</a>, <a href="https://sites.google.com/view/shinjiwatanabe">Shinji Watanabe</a></div>
-                            <div class="project-venue"><b>[ASRU 2025]</b> (Demo) <span class="badge">Best Demo Candidate</span></div>
+                            <div class="project-venue"><b>[ASRU 2025]</b> (Demo) <span class="badge">Best Demo Candidate</span> | <a href="https://ieeexplore.ieee.org/document/11434734">paper</a> | <a href="https://github.com/shinjiwlab/versa">code</a></div>
                         </div>
                         
                         <!-- VERSA Paper -->
@@ -163,7 +190,7 @@
 
 
             <!-- Fashion Chatroom Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/fashionchatroom.png" alt="FashionChatroom" class="project-photo">
                     <div class="project-title">Fashion Chatroom: An Automated Pipeline for Fashion Dataset Construction</div>
@@ -174,7 +201,7 @@
             </div>
 
             <!-- VR Locomotion Project -->
-            <div class="project-item">
+            <div class="project-item" data-pub-type="paper">
                 <div class="project-content">
                     <img src="./../resources/vrlocomotion.png" alt="VRLocomotion" class="project-photo">
                     <div class="project-title">Exploring Locomotion Methods with Upright Redirected Views for VR Users in Reclining & Lying Positions</div>
@@ -184,11 +211,37 @@
                     <!-- <div class="project-tldr">Novel VR locomotion techniques using upright redirected views to enable comfortable navigation for users in reclining and lying positions.</div> -->
                 </div>
             </div>
+            </div>
             
         </div>
 
     </div>
 
-    <script src="./scripts.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tabs = document.getElementById('pub-tabs');
+        var list = document.getElementById('pub-list');
+        if (!tabs || !list) return;
+
+        function showPubTab(tabKey) {
+            list.querySelectorAll('.project-item[data-pub-type]').forEach(function (item) {
+                item.hidden = item.getAttribute('data-pub-type') !== tabKey;
+            });
+            tabs.querySelectorAll('.pub-tab[data-pub-tab]').forEach(function (btn) {
+                var active = btn.getAttribute('data-pub-tab') === tabKey;
+                btn.classList.toggle('is-active', active);
+                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+            });
+        }
+
+        tabs.addEventListener('click', function (e) {
+            var btn = e.target.closest && e.target.closest('.pub-tab[data-pub-tab]');
+            if (!btn || !tabs.contains(btn)) return;
+            e.preventDefault();
+            showPubTab(btn.getAttribute('data-pub-tab'));
+        });
+    });
+    </script>
+    <script src="./../scripts.js"></script>
 </body>
 </html>

@@ -338,6 +338,20 @@ body.activities-page, html.activities-page {
         margin-left: 15px;
     }
 
+    .home-page .home-meta-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.15em 0.55em;
+    }
+
+    .home-page .home-meta-row > .home-beliefs-details--contact {
+        flex: 0 1 auto;
+        max-width: none;
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
+    }
+
     .home-page .bellman-eq {
         font-size: 0.95em;
     }
@@ -453,19 +467,64 @@ body.activities-page, html.activities-page {
     min-width: 0;
 }
 
+.home-page .home-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.55em;
+    row-gap: 0.15em;
+    margin: 0.15em 0 0;
+    padding-top: 0.55em;
+    border-top: 1px solid #ececec;
+    font-size: 0.92em;
+    line-height: 1.5;
+    color: #8a8a8a;
+}
+
+.home-page .home-meta-row > .home-beliefs-details {
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+}
+
+.home-page .home-meta-row > .home-beliefs-details[open] {
+    flex: 1 1 100%;
+}
+
+.home-page .home-meta-sep {
+    color: #c0c0c0;
+    user-select: none;
+}
+
 .home-page .home-beliefs-details {
-    margin: 0 0 12px;
+    margin: 0;
 }
 
 .home-page .home-beliefs-summary {
     cursor: pointer;
     list-style: none;
-    font-size: 1em;
-    line-height: 1.5;
+    display: inline;
+    font-size: inherit;
+    line-height: inherit;
     font-weight: 400;
-    color: #333;
+    color: #8a8a8a;
     margin: 0;
     padding: 0;
+    transition: color 0.2s ease;
+}
+
+.home-page .home-beliefs-summary:hover {
+    color: #555;
+}
+
+.home-page .home-focus-points a {
+    color: #6f6f6f;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+.home-page .home-focus-points a:hover {
+    color: #005999;
 }
 
 .home-page .home-beliefs-summary::-webkit-details-marker {
@@ -479,9 +538,9 @@ body.activities-page, html.activities-page {
 .home-page .home-beliefs-summary::before {
     content: "▸ ";
     display: inline-block;
-    color: #8a8a8a;
+    color: #b0b0b0;
     font-weight: 600;
-    margin-right: 0.15em;
+    margin-right: 0.1em;
     transition: transform 0.2s ease;
     transform: rotate(0deg);
     transform-origin: 50% 55%;
@@ -492,18 +551,19 @@ body.activities-page, html.activities-page {
 }
 
 .home-page .home-focus-points {
-    margin: 8px 0 0;
-    padding: 10px 14px;
+    margin: 6px 0 2px;
+    padding: 0 0 0 0.85em;
     list-style: none;
-    border-left: 3px solid #d9d9d9;
-    background: #fafafa;
-    border-radius: 6px;
+    border-left: 2px solid #e6e6e6;
+    background: none;
+    border-radius: 0;
 }
 
 .home-page .home-focus-points li {
-    margin: 6px 0;
+    margin: 4px 0;
     color: #6f6f6f;
     line-height: 1.55;
+    font-size: 0.98em;
 }
 
 .home-page .home-focus-points li::before {
@@ -722,6 +782,45 @@ h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.3em;
+}
+
+/* Paper / Demo tab switch */
+.pub-tabs {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35em;
+    margin-bottom: 16px;
+}
+
+.pub-tab {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: #999;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.pub-tab:hover {
+    color: #666;
+}
+
+.pub-tab.is-active {
+    color: #444;
+}
+
+.pub-tab-sep {
+    color: #bbb;
+    font-weight: 400;
+    user-select: none;
+}
+
+.pub-list .project-item[hidden] {
+    display: none;
 }
 
 h4 {
